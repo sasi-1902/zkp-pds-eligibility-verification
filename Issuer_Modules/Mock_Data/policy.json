@@ -1,0 +1,61 @@
+{
+  "policy_set_id": "PDS-POL-V1",
+  "policy_name": "Mock PDS Eligibility Policy for ZKP Prototype",
+  "policy_description": [
+    "This policy file defines the eligibility conditions for issuing a beneficiary credential.",
+    "It is a simplified prototype policy and does not represent the full real-world PDS policy framework.",
+    "The main purpose is to support mock credential generation and zero-knowledge proof input preparation."
+  ],
+  "eligibility_rules": {
+  "income_threshold": 100000,
+  "household_size_limit": 8,
+  "allowed_district": 7,
+  "required_identity_verified": true,
+  "required_residency_verified": true
+},
+  
+  "beneficiary_class_rules": {
+    "AAY": {
+      "description": "Higher-priority vulnerable household category.",
+      "conditions": [
+        "income_value < 50000",
+        "household_size >= 5"
+      ]
+    },
+    "PHH": {
+      "description": "Priority household category.",
+      "conditions": [
+        "income_value < 100000"
+      ]
+    }
+  },
+
+  "entitlement_rules": {
+    "PHH": {
+      "entitlement_id": "ENT-RICE-001",
+      "entitlement_class": "PHH",
+      "allowed_items": ["rice", "wheat"],
+      "total_quantity": 35,
+      "distribution_period": "monthly",
+      "notes": "Used as a simplified prototype entitlement."
+    },
+    "AAY": {
+      "entitlement_id": "ENT-RICE-002",
+      "entitlement_class": "AAY",
+      "allowed_items": ["rice", "wheat", "sugar"],
+      "total_quantity": 35,
+      "distribution_period": "monthly",
+      "notes": "Used as a simplified prototype entitlement for vulnerable households."
+    }
+  },
+
+  
+  "revocation_policy": {
+    "enabled": true,
+    "description": "Credential must not be revoked at the time of proof verification."
+  },
+  "notes": [
+    "The descriptive fields are included for readability and documentation.",
+    "The credential generator may use only the threshold and entitlement fields programmatically."
+  ]
+}

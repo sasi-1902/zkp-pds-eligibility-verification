@@ -1,0 +1,21 @@
+citizen_id,name,age,gender,state_code,district_code,district_name,income_value,income_source,household_size,vehicle_type,is_government_employee,identity_verified,residency_verified,expected_eligibility
+1,Reva Singhal,57,Female,AP,107,Srikakulam,56823,Private Salaried,3,none,False,False,True,Not Eligible
+2,Anirudh Rajan,35,Male,AP,101,Chittoor,38326,Self-Employed,4,Two Wheeler,False,True,True,Eligible
+3,Oviya Mander,37,Female,AP,106,Prakasam,60189,Private Salaried,9,none,False,True,True,Eligible
+4,Bahadurjit Comar,66,Male,AP,101,Chittoor,119568,Pensioner,7,Four Wheeler,False,True,True,Not Eligible
+5,Qabil Patla,34,Male,AP,106,Prakasam,119346,Farmer,5,Two Wheeler,False,True,True,Not Eligible
+6,Faras Raghavan,24,Male,AP,103,Guntur,91801,Farmer,8,Two Wheeler,False,False,False,Not Eligible
+7,Eesha Pradhan,21,Female,AP,109,Vizianagaram,82725,Self-Employed,8,Two Wheeler,False,True,True,Eligible
+8,Anirudh Bir,56,Male,AP,109,Vizianagaram,24147,Homemaker,2,none,False,True,True,Eligible
+9,Matthew Dugal,42,Male,AP,109,Vizianagaram,58726,Private Salaried,10,none,False,True,True,Eligible
+10,Meghana Gupta,70,Female,AP,105,Kurnool,72516,Pensioner,2,Two Wheeler,False,True,True,Eligible
+11,Arunima Hari,40,Female,AP,110,West Godavari,38000,Unemployed,7,none,False,True,False,Not Eligible
+12,Aryan Bakshi,24,Male,AP,104,Krishna,54333,Private Salaried,1,Four Wheeler,False,True,True,Not Eligible
+13,Dev Shankar,55,Male,AP,105,Kurnool,93795,Government,5,none,True,True,True,Not Eligible
+14,Deepa Kalla,57,Female,AP,106,Prakasam,149218,Government,9,none,True,True,True,Not Eligible
+15,Orinder Ganguly,59,Male,AP,103,Guntur,155392,Homemaker,4,Two Wheeler,False,True,True,Not Eligible
+16,Saumya Banerjee,40,Female,AP,102,East Godavari,71247,Farmer,3,none,False,True,True,Eligible
+17,Ishani Hans,41,Female,AP,103,Guntur,76444,Homemaker,8,none,False,True,True,Eligible
+18,Vedhika Maharaj,65,Female,AP,107,Srikakulam,67838,Pensioner,5,Two Wheeler,False,True,True,Eligible
+19,Bhavika Prashad,22,Female,AP,105,Kurnool,50221,Unemployed,9,Two Wheeler,False,True,True,Eligible
+20,Vasana Wadhwa,22,Female,AP,102,East Godavari,149084,Homemaker,6,Two Wheeler,False,True,True,Not Eligible

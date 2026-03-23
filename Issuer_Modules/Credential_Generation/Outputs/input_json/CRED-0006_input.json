@@ -1,0 +1,14 @@
+{
+  "citizen_id": 6,
+  "credential_id": "CRED-0006",
+  "income_value": 91801,
+  "household_size": 8,
+  "district_code": 103,
+  "is_government_employee": false,
+  "identity_verified": false,
+  "residency_verified": false,
+  "revocation_nonce": "0x8fe1cae9ee12189a4a213439b8c63574",
+  "revocation_root": "0x0",
+  "revocation_root_version": 1,
+  "revocation_status_expected": "not_revoked"
+}

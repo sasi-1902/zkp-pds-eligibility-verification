@@ -1,0 +1,13 @@
+{
+  "policy_name": "pds_eligibility_policy",
+  "policy_type": "zkp_verification_rules",
+  "policy_version": 1,
+  "rules": {
+    "max_income": 100000,
+    "require_identity_verified": true,
+    "require_residency_verified": true,
+    "allow_government_employee": false,
+    "allowed_vehicle_types": ["none", "Two Wheeler"]
+  },
+  "output": "eligibility_result"
+}

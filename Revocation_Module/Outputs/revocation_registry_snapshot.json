@@ -1,0 +1,9 @@
+{
+  "issuer_id": "ISSUER-PDS-AP-001",
+  "registry_id": "REVREG-PDS-AP-001",
+  "state": {
+    "root": "0x0",
+    "version": 1,
+    "updated_at": "2026-03-23T17:24:44.947710Z"
+  }
+}

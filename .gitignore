@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+
+# OS
+.DS_Store
+
+# Virtual env
+venv/
+.env/
+
+# Generated files (keep for now, can ignore later)
+# Issuer_Modules/Credential_Generation/Outputs/
+# Revocation_Module/Outputs/witnesses/

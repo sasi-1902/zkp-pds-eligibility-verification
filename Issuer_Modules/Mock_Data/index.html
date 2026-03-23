@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Citizen Registry</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        th {
+            background: #2c3e50;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f1f1f1;
+        }
+
+        .eligible {
+            color: green;
+            font-weight: bold;
+        }
+
+        .not-eligible {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Dataset for Testing</h2>
+
+<table id="citizenTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>District</th>
+            <th>Income</th>
+            <th>Income Source</th>
+            <th>Household</th>
+            <th>Vehicle</th>
+            <th>Govt Employee</th>
+            <th>Expected Status</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    fetch("test_citizens.csv")
+    .then(response => response.text())
+    .then(data => {
+        const rows = data.trim().split("\n").slice(1);
+        const table = document.querySelector("#citizenTable tbody");
+
+        rows.forEach(row => {
+            if (!row.trim()) return;
+
+            const cols = row.split(",");
+
+            const id = cols[0].trim();
+            const name = cols[1].trim();
+            const age = cols[2].trim();
+            const districtName = cols[6].trim();
+            const income = cols[7].trim();
+            const incomeSource = cols[8].trim();
+            const household = cols[9].trim();
+            const vehicleType = cols[10].trim();
+            const isGovernmentEmployee = cols[11].trim() === "True";
+            const expectedStatus = cols[14].trim(); // last column
+
+            const tr = document.createElement("tr");
+
+            tr.innerHTML = `
+                <td>${id}</td>
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${districtName}</td>
+                <td>${income}</td>
+                <td>${incomeSource}</td>
+                <td>${household}</td>
+                <td>${vehicleType}</td>
+                <td>${isGovernmentEmployee ? "Yes" : "No"}</td>
+                <td class="${expectedStatus === 'Eligible' ? 'eligible' : 'not-eligible'}">
+                    ${expectedStatus}
+                </td>
+            `;
+
+            table.appendChild(tr);
+        });
+    });
+</script>
+
+</body>
+</html>

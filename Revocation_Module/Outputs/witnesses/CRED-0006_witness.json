@@ -1,0 +1,13 @@
+{
+  "citizen_id": 6,
+  "credential_id": "CRED-0006",
+  "revocation_nonce": "0x8fe1cae9ee12189a4a213439b8c63574",
+  "revocation_status": "not_revoked",
+  "registry_state": {
+    "root": "0x0",
+    "version": 1,
+    "updated_at": "2026-03-23T17:24:44.947710Z"
+  },
+  "witness_type": "placeholder-status-check-v1",
+  "smt_witness": null
+}
